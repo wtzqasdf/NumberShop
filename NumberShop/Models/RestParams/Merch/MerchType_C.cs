@@ -9,6 +9,7 @@ namespace NumberShop.Models.RestParams.Merch
     public class MerchType_C
     {
         [Required]
+        [StringLength(20, MinimumLength = 1)]
         public string Name { get; set; }
     }
 }

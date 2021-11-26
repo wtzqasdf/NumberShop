@@ -11,6 +11,7 @@ namespace NumberShop.Models.RestParams.Merch
         [Required]
         public string MerchID { get; set; }
         [Required]
+        [Range(1, 99999)]
         public int Count { get; set; }
     }
 }

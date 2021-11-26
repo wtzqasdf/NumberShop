@@ -8,6 +8,7 @@ using NumberShop.Models.Repository;
 using NumberShop.Models.Contexts;
 using NumberShop.Models.RestParams.Merch;
 using NumberShop.Commons.Cookie;
+using NumberShop.Filters;
 
 namespace NumberShop.Controllers.Api
 {
@@ -69,6 +70,7 @@ namespace NumberShop.Controllers.Api
 
         [Route("review")]
         [HttpPost]
+        [ModelAuth]
         public IActionResult Review([FromBody]Review_C model)
         {
             User user = _sessionRepo.GetSessionAsUser(_cookie.Token);

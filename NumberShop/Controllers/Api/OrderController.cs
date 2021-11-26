@@ -54,6 +54,7 @@ namespace NumberShop.Controllers.Api
         [Route("merch")]
         [HttpPost]
         [Member]
+        [ModelAuth]
         public IActionResult Merch([FromBody]Order_C model)
         {
             //1, get user from cookie token

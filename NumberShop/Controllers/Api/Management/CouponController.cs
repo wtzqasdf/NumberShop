@@ -31,6 +31,7 @@ namespace NumberShop.Controllers.Api.Management
 
         [HttpPost]
         [Manager]
+        [ModelAuth]
         public IActionResult Index([FromBody] Coupon_C model)
         {
             _couponRepo.AddCoupon(model);
@@ -39,6 +40,7 @@ namespace NumberShop.Controllers.Api.Management
 
         [HttpPut]
         [Manager]
+        [ModelAuth]
         public IActionResult Index([FromBody] Coupon_U model)
         {
             _couponRepo.UpdateCoupon(model);
